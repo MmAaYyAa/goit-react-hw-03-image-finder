@@ -6,6 +6,8 @@ import {
   SearchFormButtonLabel,
   SearchFormInput,
 } from './Searchbar.styled';
+import { Notify } from 'notiflix';
+
 export default class Searchbar extends Component {
   state = {
     inputValue: '',
@@ -18,7 +20,7 @@ export default class Searchbar extends Component {
   handleSubmit = event => {
     event.preventDefault();
     if (this.state.inputValue.trim() === '') {
-      alert('Enter your request');
+      Notify.info('Enter your request');
       return;
     }
     this.props.onSubmit(this.state.inputValue.trim());
