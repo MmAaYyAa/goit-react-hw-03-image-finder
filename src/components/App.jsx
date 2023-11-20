@@ -56,7 +56,7 @@ export default class App extends Component {
   handleFormSubmit = searchQuery => {
     this.setState({
       currentPage: 1,
-      quantityPage: null,
+      quantityPages: null,
       gallery: [],
       error: null,
       searchQuery,
